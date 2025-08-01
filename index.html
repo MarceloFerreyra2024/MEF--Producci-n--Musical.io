@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEF - Producción Musical</title>
+    <!-- Enlace a Tailwind CSS para estilos rápidos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace a tu hoja de estilos personalizada -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- El script que proporciona la interactividad -->
+    <script src="script.js" defer></script>
+    <!-- Iconos para los botones de contacto (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="bg-gray-800 text-white fixed top-0 left-0 w-full z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-emerald-400">Mef</a>
+
+            <!-- Menú para Escritorio -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#inicio" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">Inicio</a>
+                <a href="#servicios" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">Servicios</a>
+                <a href="#como-funciona" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">¿Cómo funciona?</a>
+                <a href="#planes" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">Planes</a>
+                <a href="#nosotros" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">Nosotros</a>
+                <a href="#contacto" class="nav-link px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-700">Contacto</a>
+            </div>
+
+            <!-- Botón del Menú Móvil -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none p-2 rounded-md hover:bg-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menú Móvil (inicialmente oculto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <a href="#inicio" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">Inicio</a>
+            <a href="#servicios" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">Servicios</a>
+            <a href="#como-funciona" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">¿Cómo funciona?</a>
+            <a href="#planes" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">Planes</a>
+            <a href="#nosotros" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">Nosotros</a>
+            <a href="#contacto" class="nav-link block text-center py-3 text-white hover:bg-gray-700 transition-colors duration-300">Contacto</a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop');">
+            <div class="text-center p-8">
+                 <h1 class="text-5xl font-extrabold text-white">Sonido Profesional Para Tu Música</h1>
+                 <p class="text-xl text-gray-200 mt-4">Producción, mezcla y mastering de alta calidad.</p>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-12">Servicios de Producción</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Mezcla y Mastering</h3>
+                        <p class="text-gray-600">Dale a tus pistas la claridad, potencia y cohesión que merecen para sonar increíble en cualquier plataforma.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Producción de Beats</h3>
+                        <p class="text-gray-600">Beats originales y personalizados para cualquier género musical. Ideales para cantantes, raperos y creadores de contenido.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Grabación de Voces</h3>
+                        <p class="text-gray-600">Utilizando equipo de alta gama, capturamos tu voz con la máxima calidad, calidez y definición.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: ¿Cómo funciona? -->
+        <section id="como-funciona" class="py-20 bg-overlay" style="background-image: url('https://images.unsplash.com/photo-1598488035139-BFFb2d08a517?q=80&w=1954&auto=format&fit=crop');">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white mb-12">¿Cómo funciona?</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Paso 1 -->
+                    <div class="text-white">
+                        <div class="bg-emerald-400 text-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h3 class="text-2xl font-bold mb-2">Contame tu idea</h3>
+                        <p class="text-gray-300">Empezamos con una conversación. Me contás qué tipo de música querés crear, el estilo, las influencias, y si ya tenés letras o maquetas.</p>
+                    </div>
+                    <!-- Paso 2 -->
+                    <div class="text-white">
+                        <div class="bg-emerald-400 text-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h3 class="text-2xl font-bold mb-2">Desarrollo y Producción</h3>
+                        <p class="text-gray-300">Una vez clara la visión, me encargo de la composición, los arreglos, la grabación de instrumentos y voces, y todo el proceso de producción.</p>
+                    </div>
+                    <!-- Paso 3 -->
+                    <div class="text-white">
+                        <div class="bg-emerald-400 text-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h3 class="text-2xl font-bold mb-2">Mezcla y Masterización</h3>
+                        <p class="text-gray-300">Tu música pasará por un proceso profesional de mezcla para equilibrar todos los elementos y la masterización para optimizar su sonido.</p>
+                    </div>
+                    <!-- Paso 4 -->
+                    <div class="text-white">
+                        <div class="bg-emerald-400 text-gray-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                        <h3 class="text-2xl font-bold mb-2">Entrega Final</h3>
+                        <p class="text-gray-300">Recibirás tu single o proyecto terminado, listo para ser lanzado al mundo. ¡Y con tu portada digital personalizada incluida!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Planes y precios -->
+        <section id="planes" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white mb-12">Planes y Precios</h2>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Plan 1: Single Express -->
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 shadow-lg flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Single Express</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Ideal para artistas que buscan una producción rápida y de calidad para una sola canción.</p>
+                        <ul class="text-left text-gray-300 mb-6 space-y-2">
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Producción completa de 1 single</li>
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Mezcla y Masterización</li>
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Portada digital personalizada</li>
+                        </ul>
+                        <a href="#contacto" class="mt-auto bg-emerald-500 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-600 transition-colors duration-300">Consultar Precio</a>
+                    </div>
+                    <!-- Plan 2: EP Básico -->
+                    <div class="bg-gray-800 p-8 rounded-lg border-2 border-emerald-500 shadow-lg flex flex-col transform scale-105">
+                        <h3 class="text-2xl font-bold mb-4 text-emerald-400">EP Básico</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Perfecto para proyectos más ambiciosos con varias canciones que requieren cohesión.</p>
+                        <ul class="text-left text-gray-300 mb-6 space-y-2">
+                             <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Producción de hasta 3 canciones</li>
+                             <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Mezcla y Masterización</li>
+                             <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Portada digital personalizada</li>
+                             <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Soporte y asesoría constante</li>
+                        </ul>
+                        <a href="#contacto" class="mt-auto bg-emerald-500 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-600 transition-colors duration-300">Consultar Precio</a>
+                    </div>
+                    <!-- Plan 3: Álbum Completo -->
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 shadow-lg flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-emerald-400">Álbum Completo</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Para artistas que quieren desarrollar un trabajo discográfico completo y profesional.</p>
+                        <ul class="text-left text-gray-300 mb-6 space-y-2">
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Producción de hasta 10 canciones</li>
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Mezcla y Masterización</li>
+                            <li><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Diseño de arte para álbum completo</li>
+                        </ul>
+                        <a href="#contacto" class="mt-auto bg-emerald-500 text-white font-bold py-2 px-6 rounded-full hover:bg-emerald-600 transition-colors duration-300">Consultar Precio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nosotros -->
+        <section id="nosotros" class="py-20 bg-gray-100">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Sobre Mef</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-700">Con años de experiencia en la industria, mi pasión es transformar tus ideas en producciones musicales impactantes. Trabajo de cerca con cada artista para capturar su visión y llevar su sonido al siguiente nivel.</p>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="py-20 bg-white">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Hagamos Música</h2>
+                <p class="text-lg text-gray-600 mb-4">¿Listo para empezar tu próximo proyecto? Contáctame.</p>
+                <p class="text-lg text-gray-700 font-semibold mb-8">(54) 221-3628066</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <!-- Botón de WhatsApp -->
+                    <a href="https://wa.me/5492213628066" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-green-500 text-white font-bold py-3 px-8 rounded-full hover:bg-green-600 transition-all transform hover:scale-105">
+                        <i class="fab fa-whatsapp mr-3 text-xl"></i>
+                        Chatear por WhatsApp
+                    </a>
+                    <!-- Botón de Gmail -->
+                    <a href="mailto:mefproduccionmusical2025@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center bg-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition-all transform hover:scale-105">
+                         <i class="far fa-envelope mr-3 text-xl"></i>
+                        Enviar un Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

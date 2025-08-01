@@ -1,0 +1,31 @@
+/* Este archivo contiene estilos personalizados que complementan a Tailwind CSS.
+*/
+
+/* Estilo para el efecto de superposición en las secciones con imagen de fondo */
+.bg-overlay {
+    position: relative; /* Necesario para posicionar el pseudo-elemento ::before */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Crea una capa oscura semi-transparente sobre la imagen de fondo.
+  Esto mejora la legibilidad del texto que se encuentra encima.
+*/
+.bg-overlay::before {
+    content: ''; /* Requerido para que el pseudo-elemento se muestre */
+    position: absolute; /* Se posiciona en relación al contenedor .bg-overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Color negro con 60% de opacidad */
+    z-index: 1; /* Se asegura que la superposición esté debajo del contenido de texto */
+}
+
+/* Asegura que el contenido directo de .bg-overlay (como los títulos y párrafos)
+  se muestre por encima de la capa de superposición.
+*/
+.bg-overlay > * {
+    position: relative; /* Para que el z-index tenga efecto */
+    z-index: 2;
+}
