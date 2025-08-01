@@ -1,0 +1,15 @@
+/* Estilo para la fuente Inter */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animación suave para el scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para la barra de navegación activa */
+.nav-link-active {
+    font-weight: 700;
+    color: #111827; /* dark gray */
+}
